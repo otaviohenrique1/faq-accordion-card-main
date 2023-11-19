@@ -1,0 +1,107 @@
+:root {
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 5%;
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+  background-color: var(--light-grayish-blue);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 1000px;
+  min-height: 510px;
+  border-radius: 2em;
+  align-items: center;
+}
+
+/* .item {} */
+
+.item-1 {
+  /* background-color: aqua; */
+}
+
+.item-2 {
+  /* background-color: aquamarine; */
+  padding: 6em;
+}
+
+.titulo {
+  color: var(--very-dark-desaturated-blue);
+  padding-bottom: 1em;
+  font-size: 3em;
+}
+
+.accordion {
+  background-color: var(--light-grayish-blue);
+  /* background-color: #eee; */
+  color: #444;
+  cursor: pointer;
+  padding: 18px 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  transition: 0.4s;
+}
+
+.active {
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.accordion:hover {
+  /* background-color: #ccc; */
+  color: var(--soft-red);
+}
+
+.accordion:after {
+  /* content: '\002B'; */
+  content: '';
+  background-image: url(../images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  background-image: url(../images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  rotate: 180deg;
+  content: "";
+  /* content: "\2212"; */
+}
+
+.panel {
+  /* padding: 0 18px; */
+  /* background-color: white; */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+  margin-bottom: 1.25em;
+}
